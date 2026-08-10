@@ -26,6 +26,19 @@
 #         slargest=i
 # print("The second largest number in the list is: ", slargest)
 
+#to find second smallest number
+# a=[8,3,6,2,9,4]
+# smallest=a[0]
+# ssmallest=float('inf')
+# for i in a:
+#     if i<smallest:
+#         ssmallest=smallest
+#         smallest=i
+#     elif i<ssmallest and i!=smallest:
+#         ssmallest=i
+
+# print("the second smallest element is : ", ssmallest)
+
 #to find list is sorted or not
 # a=[1,2,6,4,5]
 # for i in range(len(a)-1):
@@ -100,3 +113,33 @@
 
 # avg=sum/len(a)
 # print(avg)
+
+#find how many elements are greater than 5
+# a=[3,8,2,9,5,7]
+# count=0
+# for i in a:
+#     if (i>5):
+#         count = count + 1
+# print("no. of elements which greater than 5 is: ", count)
+
+#find how many times a number appears in the list
+# a=[2,5,2,8,2,7,5]
+# count=0
+# n=int(input("enter a number for list for counting: "))
+# for i in a:
+#     if i==n:
+#         count = count+1
+# print(f"the number {n} is appered in the given list is {count} times")
+
+#to find duplicates
+# a=[2,5,2,8,5,7,2]
+# duplicates=[]
+# for i in a:
+#     count=0
+#     for j in a:
+#         if i==j:
+#             count=count+1
+#         if count>1:
+#             if i not in duplicates:
+#                 duplicates.append(i)
+# print(duplicates)
