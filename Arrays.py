@@ -143,3 +143,49 @@
 #             if i not in duplicates:
 #                 duplicates.append(i)
 # print(duplicates)
+
+#find largest difference between two numbers
+# a=[3,8,2,9,5,1]
+# ldif=0
+# for i in a:
+#     for j in a:
+#         if abs(i-j)>ldif:
+#             ldif=abs(i-j)
+# print(ldif)
+
+#find smallest difference between two numbers
+# a=[3,8,2,9,5,1]
+# sdif=float('inf')
+# for i in a:
+#     for j in a:
+#         if i!=j and abs(i-j)<sdif:
+#             sdif=abs(i-j)
+# print(sdif)
+
+#find sum of all elements at even indices:
+# a=[10,20,30,40,50,60]
+# sum=0
+# for i in range(0,6):
+#     if i%2==0:
+#         sum=sum+a[i]
+# print(sum)
+
+#find sum of all elements at odd indices:
+# a=[10,20,30,40,50,60]
+# sum=0
+# for i in range(0,6):
+#     if i%2!=0:
+#         sum=sum+a[i]
+# print(sum)
+
+#find number of elements which are greater than the avg of array
+# a=[2,4,6,8,10]
+# sum=0
+# for i in a:
+#     sum = sum + i
+# avg=sum/len(a)
+# count=0
+# for i in a:
+#     if i>avg:
+#         count=count+1
+# print(count)
