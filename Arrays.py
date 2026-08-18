@@ -189,3 +189,33 @@
 #     if i>avg:
 #         count=count+1
 # print(count)
+
+#find the unique elements in the list
+# a=[4,5,4,2,5,7,2]
+# for i in a:
+#     count=0
+#     for j in a:
+#         if i==j:
+#             count=count+1
+#     if count==1:
+#         print(i)
+
+# find pairs of numbers whose sum is equal to target
+# from itertools import count
+
+# a=[2,4,3,5,7]
+# target=7
+# count=0
+# for i in range(len(a)):
+#     for j in range(i+1, len(a)):
+#         if a[i] + a[j]==target:
+#             count=count+1
+#             print(a[i], a[j])
+# print(count)
+
+# find the missing number in the list
+# a=[1,2,3,5,6]
+# n=len(a)+1
+# for i in range(1,n+1):
+#     if i not in a:
+#         print(i)
