@@ -255,7 +255,7 @@
 #                 count=count+1
 #         print(f"the frequency of {i} is: {count}")
         
-# question 25: max element found
+# Question 25: Maximum Frequency Element
 # a=[2,3,2,5,3,2,7]
 # b=[]
 # max=0
@@ -270,7 +270,7 @@
 #             max=count
 #             print(f'max element is {i} = {max}')
 
-# question 27:first duplicate element
+# Question 26: First Duplicate Element
 # a=[5,3,4,3,2,5,7]
 # for i in range(len(a)):
 #     for j in range(i+1,len(a)):
@@ -278,7 +278,7 @@
 #             print(f'{a[i]} is first repeating elment') 
 #     break 
 
-# question 28: first duplicate element
+# Question 27: First Repeating Element using Set
 # a=[5,3,4,3,2,5,7]
 # b=[]
 # for i in range(len(a)):
@@ -288,7 +288,7 @@
 #     else:
 #         b.append(a[i])      
 
-# question 29: first non repeating element               
+# Question 28: First Non-Repeating Element
 # a=[5,3,4,3,2,5,7]
 # for i in range(len(a)):
 #     count=0
@@ -298,3 +298,63 @@
 #     if count==1:
 #         print(f'first non repeating element is {a[i]}')
 #         break
+
+# Question 29: Leaders in an Array
+# a=[12,22,12,3,0,6]
+# for i in range(len(a)):
+#     leader=True
+#     for j in range(i+1, len(a)):
+#         if a[i]<=a[j]:
+#             leader=False
+#             break
+#     if leader:
+#         print(f'{a[i]} is a leader')
+
+# Question 30: Length of the Longest Consecutive Sequence
+# a=[100,4,200,1,2,3]
+# max=0
+# for i in a:
+#     if i-1 not in a:
+#         count=1
+#         while i+count in a:
+#             count+=1
+#         if count>max:
+#             max=count
+# print(max)
+
+# Question 31: Maximum Subarray Sum (Kadane's Algorithm)
+# a=[-2, 1, -3, 4, -1, 2, 1, -5, 4]
+# sum=0
+# max=0
+# for i in a:
+#     sum=sum+i
+#     if sum<0:
+#         sum=0
+#     if sum>max:
+#         max=sum
+# print(max)
+
+# Question 32: Maximum Product Subarray
+# a=[2,3,-3,4]
+# prod=1
+# max=0
+# for i in a:
+#     prod=prod*i
+#     if prod>max:
+#         max=prod
+# print(max)
+
+# Question 33: Maximum Product Subarray (Optimized)
+# a=[-2, 1, -3, 4, -1, 2, 1, -5, 4]
+# max_prod=a[0]
+# min_prod=a[0]
+# answer=a[0]
+# for i in range(1,len(a)):
+#     current=a[i]
+#     old_max=max_prod
+#     old_min=min_prod
+#     max_prod=max(current, old_max * current, old_min * current)
+#     min_prod=min(current, old_max * current, old_min * current)
+#     answer=max(answer, max_prod)
+# print(answer)
+
