@@ -1,30 +1,23 @@
 # DSA Practice in Python
 
-This repository contains Python practice problems for Data Structures and Algorithms.
+A collection of Python exercises for practicing data structures and algorithms. The examples are grouped by topic:
 
-## Included files
+- [arrays.py](arrays.py) - array traversal and manipulation, extrema, sorting checks, counting and frequency, duplicates, and subarray problems.
+- [binaryseach.py](binaryseach.py) - binary search, bounds and occurrences, rotated arrays, and binary-search-on-answer problems such as allocation and capacity.
+- [string](string) - string manipulation, prefixes, mappings, rotations, anagrams, and character frequencies.
 
-- [Arrays.py](Arrays.py) - array-based problems such as largest/smallest values, duplicates, frequency, sorting checks, and common array operations.
-- [binaryseach.py](binaryseach.py) - binary search problems including lower bound, upper bound, search insert position, rotated arrays, and binary search variants.
+## Running the exercises
 
-## How to use
-
-Run any file with Python from the project folder:
+Run a file from the repository folder with Python:
 
 ```bash
-python Arrays.py
+python arrays.py
 python binaryseach.py
+python string
 ```
 
-These files are organized as practice exercises and are best used by uncommenting one question at a time and running it to see the output.
+The exercise examples are commented out. Uncomment the example you want to try, then run its file to see the result.
 
 ## Purpose
 
-The goal is to practice core DSA logic in Python and improve understanding of patterns like:
-
-- array traversal
-- searching
-- counting and frequency
-- duplicates and unique values
-- binary search techniques
-- optimization problems
+Use these exercises to build familiarity with common DSA patterns, reason through solutions, and practice implementing them in Python.
