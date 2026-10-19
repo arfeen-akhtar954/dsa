@@ -1,0 +1,105 @@
+# QUESTION 1:remove outer paranthesis
+# def remove_outer_paranthesis(s):
+#     answer=''
+#     count=0
+#     for ch in s:
+#         if ch=='(':
+#             if count>0:
+#                 answer+=ch
+#             count+=1
+#         else: 
+#             count-=1
+#             if count>0:
+#                 answer+=ch
+#     return answer
+
+# print(remove_outer_paranthesis('(()())()'))
+
+#reverse statement
+# s='the sky is blue'
+# words=s.split()
+# answer=words[::-1]
+# result=' '.join(answer)
+# print(result)
+
+#reverse each word in string
+# s='the sky is blue'
+# words=s.split()
+# answer=[]
+# for word in words:
+#     answer.append(word[::-1])
+# result=' '.join(answer)
+# print(result)
+
+#find largest odd number
+# s='35420'
+# for i in range(len(s)-1, -1, -1):
+#     if int(s[i]) % 2 == 1:
+#         print(s[:i+1])
+#         break
+
+
+# longest common prefix
+# def longest_common_prefix(strs):
+#     answer=''
+#     for i in range(len(strs[0])):
+#         for s in strs:
+#             if i>=len(s) or s[i]!=strs[0][i]:
+#                 return answer
+#         answer+=strs[0][i]
+#     return answer
+
+# print(longest_common_prefix(['flower', 'flow', 'flight']))
+
+# ISOMORPHIC STRING
+# def is_isomorphic(s, t):
+#     if len(s)!=len(t):
+#         return False
+#     map_s={}
+#     map_t={}
+#     for i in range(len(s)):
+#         if s[i] in map_s and map_s[s[i]]!=t[i]:
+#             return False
+#         if t[i] in map_t and map_t[t[i]]!=s[i]:
+#             return False
+
+#         map_s[s[i]]=t[i]
+#         map_t[t[i]]=s[i]
+#     return True
+
+# print(is_isomorphic('egg', 'add'))
+
+#rotate string
+# def rotate_string(s, goal):
+#     if len(s)!=len(goal):
+#         return False
+#     return goal in (s+s)
+
+# print(rotate_string('abcde', 'cdeab'))
+
+# anagram_strings
+# def anagram_strings(a, b):
+#     if len(a)!=len(b):
+#         return False
+#     return sorted(a) == sorted(b)
+# a=anagram_strings('listen', 'silent')
+# if a==True:
+#     print('given strings are anagram strings')
+# else:
+#     print('given strings are not anagram strings')
+
+# sort characters in frequency
+# def sort(s):
+#     freq={}
+#     for ch in s:
+#         if ch in freq:
+#             freq[ch] += 1
+#         else:
+#             freq[ch] = 1
+#     sorted_items=sorted(freq.items(), key=lambda item: item[1], reverse=True)
+#     result=""
+#     for item in sorted_items:
+#         result+=item[0]*item[1]
+#     return result
+# print(sort('tree'))
+        
