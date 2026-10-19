@@ -273,3 +273,164 @@
 #         left=mid+1
 # print(mid, day_used)
 # print(left)
+
+# kth missing day
+# a=[2,3,4,7,11]
+# k=5
+# left=0
+# right=len(a)-1
+# while left<=right:
+#     mid=(left+right)//2
+#     missing=a[mid]-(mid+1)
+#     if missing<=k:
+#         left=mid+1
+#     else:
+#         right=mid-1
+# print(left+k)
+
+# aggressive cow
+# stalls=[0,3,4,7,9,10]
+# k=4
+# low=1
+# high=stalls[-1]-stalls[0]
+# while low<=high:
+#     mid=(low+high)//2
+#     count=1
+#     last=stalls[0]
+#     for i in range(1, len(stalls)):
+#         if stalls[i]-last>=mid:
+#             count+=1
+#             last=stalls[i]
+#     if count>=k:
+#         answer=mid
+#         low=mid+1
+#     else:
+#         high=mid-1
+# print(answer)
+
+# book allocation method
+# a=[10,20,30,40]
+# students=2
+# low=max(a)
+# high=sum(a)
+# while low<=high:
+#     mid=(low+high)//2
+#     students_used=1
+#     pages=0
+#     for i in a:
+#         if pages+i<=mid:
+#             pages+=i
+#         else:
+#             students_used+=1
+#             pages=i
+#     if students_used<=students:
+#         answer=mid
+#         high=mid-1
+#     else:
+#         low=mid+1
+# print(answer)
+
+# split array-largest sum
+# arr=[3,5,10,5,9]
+# k=2
+# low=max(arr)
+# high=sum(arr)
+# while low<=high:
+#     mid=(low+high)//2
+#     subarray=1
+#     current_sum=0
+#     for i in arr:
+#         if current_sum+i<=mid:
+#             current_sum+=i
+#         else:
+#             subarray+=1
+#             current_sum=i
+#     if subarray<=k:
+#         answer=mid
+#         high=mid-1
+#     else:
+#         low=mid+1
+# print(answer)
+
+# painter's partition problem
+# boards=[10,20,30,40]
+# partition=2
+# low=max(boards)
+# high=sum(boards)
+# while low<=high:
+#     mid=(low+high)//2
+#     current_painter=1
+#     sum_boards=0
+#     for i in boards:
+#         if sum_boards+i<=mid:
+#             sum_boards+=i
+#         else:
+#             current_painter+=1
+#             sum_boards=i
+#     if current_painter<=partition:
+#         high=mid-1
+#     else:
+#         low=mid+1
+# print(low)
+
+# minimize max distance to gas station
+# import math
+# stations=[1,2,4,7]
+# k=2
+# low=0
+# high=3
+# while high-low>1e-6:
+#     mid=(low+high)/2
+#     needed=0
+#     for i in range(len(stations)-1):
+#         gap=stations[i+1]-stations[i]
+#         needed+=math.ceil(gap/mid)-1
+#     if needed<=k:
+#         high=mid
+#     else:
+#         low=mid
+# print(low)
+
+# MEDIAN OF TWO SORTED ARRAYS - BINARY SEARCH ON SMALLER ARRAY
+a=[1,2,10]
+b=[3,4,5]
+if len(a)>len(b):
+    a,b=b,a
+low=0
+high=len(a)
+n=len(a)+len(b)
+left_elements=(n+1)//2
+while low<=high:
+    cutA=(low+high)//2
+    cutB=left_elements-cutA
+    if cutA>0:
+        leftA=a[cutA-1]
+    else:
+        leftA=float('-inf')
+    if cutA<len(a):
+        rightA=a[cutA]
+    else:
+        rightA=float('inf')
+    if cutB>0:
+        leftB=b[cutB-1]
+    else:
+        leftB=float('-inf')
+    if cutB<len(b):
+        rightB=b[cutB]
+    else:
+        rightB=float('inf')
+
+    if leftA<=rightB and leftB<=rightA:
+        if n%2 != 0:
+            median=max(leftA, leftB)
+        else:
+            median=(max(leftA,leftB)+min(rightA,rightB))/2
+        print(median)
+        break
+
+    if leftA>rightB:
+        high=cutA-1
+    elif leftB>rightA:
+        low=cutA+1
+
+    
