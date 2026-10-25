@@ -1,4 +1,4 @@
-# QUESTION 1:remove outer paranthesis
+# QUESTION 1: Remove outer parentheses
 # def remove_outer_paranthesis(s):
 #     answer=''
 #     count=0
@@ -15,14 +15,14 @@
 
 # print(remove_outer_paranthesis('(()())()'))
 
-#reverse statement
+# QUESTION 2: Reverse statement
 # s='the sky is blue'
 # words=s.split()
 # answer=words[::-1]
 # result=' '.join(answer)
 # print(result)
 
-#reverse each word in string
+# QUESTION 3: Reverse each word in string
 # s='the sky is blue'
 # words=s.split()
 # answer=[]
@@ -31,15 +31,14 @@
 # result=' '.join(answer)
 # print(result)
 
-#find largest odd number
+# QUESTION 4: Find largest odd number
 # s='35420'
 # for i in range(len(s)-1, -1, -1):
 #     if int(s[i]) % 2 == 1:
 #         print(s[:i+1])
 #         break
 
-
-# longest common prefix
+# QUESTION 5: Longest common prefix
 # def longest_common_prefix(strs):
 #     answer=''
 #     for i in range(len(strs[0])):
@@ -51,7 +50,7 @@
 
 # print(longest_common_prefix(['flower', 'flow', 'flight']))
 
-# ISOMORPHIC STRING
+# QUESTION 6: Isomorphic string
 # def is_isomorphic(s, t):
 #     if len(s)!=len(t):
 #         return False
@@ -69,7 +68,7 @@
 
 # print(is_isomorphic('egg', 'add'))
 
-#rotate string
+# QUESTION 7: Rotate string
 # def rotate_string(s, goal):
 #     if len(s)!=len(goal):
 #         return False
@@ -77,7 +76,7 @@
 
 # print(rotate_string('abcde', 'cdeab'))
 
-# anagram_strings
+# QUESTION 8: Anagram strings
 # def anagram_strings(a, b):
 #     if len(a)!=len(b):
 #         return False
@@ -88,7 +87,7 @@
 # else:
 #     print('given strings are not anagram strings')
 
-# sort characters in frequency
+# QUESTION 9: Sort characters by frequency
 # def sort(s):
 #     freq={}
 #     for ch in s:
@@ -102,4 +101,18 @@
 #         result+=item[0]*item[1]
 #     return result
 # print(sort('tree'))
-        
+
+# QUESTION 10: Maximum depth of valid parentheses
+# def maxDepth(s):
+#     depth=0
+#     max_depth=0
+#     
+#     for i in s:
+#         if i=='(':
+#             depth+=1
+#             max_depth=max(depth, max_depth)
+#         else:
+#             depth-=1
+#     return max_depth
+
+# print(maxDepth('(()(()))'))
