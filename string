@@ -116,3 +116,58 @@
 #     return max_depth
 
 # print(maxDepth('(()(()))'))
+
+#Question 11: Roman to integer value
+# def romanToInt(s):
+#     values={
+#         'I': 1,
+#         'V': 5,
+#         'X': 10,
+#         'L': 50,
+#         'C': 100,
+#         'D': 500,
+#         'M': 1000
+#     }
+#     total=0
+#     for i in range(len(s)):
+#         current=values[s[i]]
+#         if i<len(s)-1:
+#             next_value=values[s[i+1]]
+#             if current<next_value:
+#                 total-=current
+#             else:
+#                 total+=current
+#         else:
+#             total+=current
+#     return total
+# print(romanToInt('MCMXCIV'))
+
+# Question 12: String to Integer
+# def my_atoi(s):
+#     sign=1
+#     num=0
+#     s=s.lstrip()
+#     if s == '':
+#         return 0
+#     if s[0]=='-':
+#         sign =-1
+#         s=s[1:]
+#     elif s[0]=='+':
+#         s=s[1:]
+#     for ch in s:
+#         if ch.isdigit():
+#             digit=int(ch)
+#             num = num*10 + digit
+#         else:
+#             break
+#     result=num*sign
+#     if result>2**31-1:
+#         return 2**31-1
+#     elif result<-2**31:
+#         return -2**31
+#     else: 
+#         return result
+    
+# print(my_atoi('   -42abc'))
+
+
