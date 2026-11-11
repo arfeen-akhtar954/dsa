@@ -170,4 +170,39 @@
     
 # print(my_atoi('   -42abc'))
 
+#Question 13
+# def count_substrings(s,k):
+#     n=len(s)
+#     count=0
+#     for i in range(n):
+#         l=set()
+#         for j in range(i, n):
+#             l.add(s[j])
+#             if len(l)==k:
+#                 count+=1
+#                 print(s[i:j+1])
+#             elif len(l)>k:
+#                 break
+#     return count
+# print(count_substrings('abc', 2))
 
+# Question 14
+# def longest_palindrome(s):
+#     res=''
+#     for i in range(len(s)):
+#         left=i
+#         right=i
+#         while left>=0 and right<len(s) and s[left]==s[right]:
+#             if right-left+1>len(res):
+#                 res=s[left:right+1]
+#             left-=1
+#             right+=1
+#         left=i
+#         right=i+1
+#         while left>=0 and right<len(s) and s[left]==s[right]:
+#             if right-left+1>len(res):
+#                 res=s[left:right+1]
+#             left-=1
+#             right+=1
+#     return res
+# print(longest_palindrome('babad'))
