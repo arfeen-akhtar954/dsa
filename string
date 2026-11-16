@@ -206,3 +206,34 @@
 #             right+=1
 #     return res
 # print(longest_palindrome('babad'))
+
+#Question 15
+# def sum_of_substring(s):
+#     n=len(s)
+#     total=0
+#     for i in range(n):
+#         freq={}
+#         for j in range(i, n):
+#             freq[s[j]]=freq.get(s[j], 0)+1
+#             total+=max(freq.values())-min(freq.values())
+#     return total
+# print(sum_of_substring('aaabbc'))
+
+# Question 15
+# def beauty(s):
+#     freq={}
+#     result=0
+#     for i in s:
+#         freq[i]=freq.get(i, 0)+1
+#     result=max(freq.values())-min(freq.values())
+#     return result
+# print(beauty('aaabbc'))
+
+#Question 16
+# def reverse_words(s):
+#     word=s.split()
+#     word.reverse()
+#     result=' '.join(word)
+#     return result
+# print(reverse_words('python is easy'))
+
