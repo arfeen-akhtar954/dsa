@@ -6,24 +6,6 @@ A focused Python-based repository for practicing core computer science fundament
 
 This repository contains interview-style problem-solving exercises covering foundational data structures and algorithms commonly tested in technical screening rounds. The goal is to strengthen problem-solving patterns, improve code clarity, and build confidence in writing efficient Python solutions.
 
-## Why this matters for jobs
-
-Technical interviews often evaluate:
-
-- problem-solving ability
-- algorithmic thinking
-- time and space complexity analysis
-- clean, readable implementation
-- comfort working with common coding patterns
-
-This repository helps practice those skills in a structured, reusable way and is suitable for candidates targeting roles such as:
-
-- Software Engineer
-- Backend Engineer
-- Data Engineer
-- QA Automation Engineer
-- Technical Interview Preparation
-
 ## Repository structure
 
 - [arrays.py](arrays.py) — array fundamentals, searching, sorting checks, duplicates, frequency analysis, and element comparisons.

@@ -21,6 +21,18 @@ def deleteTail(head):
     temp.next=None
     return head
 
+def deleteKthElement(head, k):
+    if head is None:
+        return None
+    if k==1:
+        head=head.next
+        return head
+    temp=head
+    for i in range(k-2):
+        temp=temp.next
+    temp.next=temp.next.next
+    return head
+
 def traversal(head):
     arr=[]
     temp=head
@@ -29,12 +41,12 @@ def traversal(head):
         temp=temp.next
     return arr
 
-head=Node(1)
-second=Node(2)
-third=Node(3)
+head=Node(10)
+second=Node(20)
+third=Node(30)
 
 head.next=second
 second.next=third
 
-head=deleteTail(head)
+head=deleteKthElement(head,1)
 print(traversal(head))
