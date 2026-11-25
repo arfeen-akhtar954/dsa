@@ -33,6 +33,27 @@ def deleteKthElement(head, k):
     temp.next=temp.next.next
     return head
 
+def insertHead(head, value):
+    newNode=Node(value)
+    if head is None:
+        head=newNode
+        return head
+    newNode.next=head
+    head=newNode
+    return head
+    
+def deleteValue(head, X):
+    if head is None:
+        return None
+    if X==head.data:
+        head=head.next
+        return head
+    temp=head
+    while temp.next.data is not X:
+        temp=temp.next
+    temp.next=temp.next.next
+    return head
+
 def traversal(head):
     arr=[]
     temp=head
@@ -48,5 +69,5 @@ third=Node(30)
 head.next=second
 second.next=third
 
-head=deleteKthElement(head,1)
+head=insertHead(head,5)
 print(traversal(head))
